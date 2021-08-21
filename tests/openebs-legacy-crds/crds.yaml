@@ -12,8 +12,8 @@ spec:
     storage: true
     served: true
     schema:
-      type: object
-      x-kubernetes-preserve-unknown-fields: true
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
   # either Namespaced or Cluster
   scope: Cluster
   names:
