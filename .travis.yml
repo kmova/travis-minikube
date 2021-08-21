@@ -27,6 +27,7 @@ language: go
 cache:
   directories:
     - $HOME/.cache/go-build
+    - $HOME/.minikube/cache/preloaded-tarball/
 
 addons:
   apt:
@@ -62,5 +63,7 @@ script:
 # Run example command
 - kubectl apply -f ./tests/openebs-legacy-crds/crds.yaml
 - kubectl get crd | grep openebs
-- kubectl apply -f ./test/openebs-legacy-crds/storagepool-cr.yaml
+- kubectl apply -f ./tests/openebs-legacy-crds/storagepool-cr.yaml
+- kubectl apply -f https://raw.githubusercontent.com/openebs/maya/master/ci/spc-manual.yaml
 - kubectl get sp -o yaml
+- kubectl get spc -o yaml
