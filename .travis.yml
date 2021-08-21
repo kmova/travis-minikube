@@ -18,6 +18,12 @@ jobs:
         - MINIKUBE_VERSION=v1.8.1
         - KUBECTL_VERSION=v1.18.0
         - K8s_VERSION=v1.18.1
+    - os: linux
+      arch: amd64
+      env:
+        - MINIKUBE_VERSION=latest
+        - KUBECTL_VERSION=v1.22.0
+        - K8s_VERSION=v1.22.0
 
 services:
   - docker
