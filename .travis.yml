@@ -19,6 +19,15 @@ jobs:
         - KUBECTL_VERSION=v1.18.0
         - K8s_VERSION=v1.18.1
 
+services:
+  - docker
+
+language: go
+
+cache:
+  directories:
+    - $HOME/.cache/go-build
+
 before_script:
 # Download kubectl, which is a requirement for using minikube.
 - curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
