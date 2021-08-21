@@ -40,6 +40,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
   # either Namespaced or Cluster
   scope: Namespaced
   names:
@@ -67,6 +70,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
   # either Namespaced or Cluster
   scope: Cluster
   names:
@@ -93,6 +99,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
   # either Namespaced or Cluster
   scope: Cluster
   names:
@@ -119,6 +128,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
     additionalPrinterColumns:
     - jsonPath: .status.capacity.used
       name: Allocated
@@ -173,6 +185,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
     additionalPrinterColumns:
     - jsonPath: .status.phase
       name: Status
@@ -211,6 +226,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
     additionalPrinterColumns:
     - jsonPath: .status.capacity.used
       name: Used
@@ -250,6 +268,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
     additionalPrinterColumns:
     - jsonPath: .spec.volumeName
       name: volume
@@ -284,6 +305,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
     additionalPrinterColumns:
     - jsonPath: .spec.volumeName
       name: volume
@@ -316,6 +340,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
     additionalPrinterColumns:
     - jsonPath: .spec.restoreName
       name: backup
@@ -353,6 +380,9 @@ spec:
   - name: v1alpha1
     storage: true
     served: true
+    schema:
+      openAPIV3Schema:
+        x-kubernetes-preserve-unknown-fields: true
   # either Namespaced or Cluster
   scope: Namespaced
   names:

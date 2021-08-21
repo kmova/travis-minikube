@@ -62,3 +62,5 @@ script:
 # Run example command
 - kubectl apply -f ./tests/openebs-legacy-crds/crds.yaml
 - kubectl get crd | grep openebs
+- kubectl apply -f ./test/openebs-legacy-crds/storagepool-cr.yaml
+- kubectl get sp -o yaml
