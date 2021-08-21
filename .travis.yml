@@ -55,7 +55,7 @@ before_script:
 - sudo minikube start --profile=minikube --vm-driver=none --kubernetes-version=${K8s_VERSION}
 - minikube update-context --profile=minikube
 - "sudo chown -R travis: /home/travis/.minikube/"
-- eval "$(minikube docker-env --profile=minikube)" && export DOCKER_CLI='docker'
+#- eval "$(minikube docker-env --profile=minikube)" && export DOCKER_CLI='docker'
 - JSONPATH='{range .items[*]}{@.metadata.name}:{range @.status.conditions[*]}{@.type}={@.status};{end}{end}';
   until kubectl get nodes -o jsonpath="$JSONPATH" 2>&1 | grep -q "Ready=True"; do
   sleep 1; done
